@@ -1,0 +1,41 @@
+@include mediaXl {
+    .catalog-books {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+@include mediaLg {
+    .catalog-books {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+@include mediaMd {
+    .lg-heading {
+        text-align: center;
+    }
+    .catalog-books {
+        grid-template-columns: repeat(2, 1fr);
+        text-align: center;
+    }
+}
+@include mediaSm {
+    .catalog-books {
+        grid-template-columns: 1fr;
+    }
+
+    .imgBx {
+        display: none;
+        img {
+            display: none;
+        }
+    }
+
+    .content {
+        h2 {
+            font-size: 18px;
+        }
+
+        p {
+            font-size: 14px;
+        }
+    }
+}

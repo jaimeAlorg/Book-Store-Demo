@@ -1,0 +1,219 @@
+@import "config";
+@import "menu";
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0%;
+}
+
+body {
+    height: 100%;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.5;
+}
+
+//Home page
+main {
+    padding: 2rem;
+    //height: 100%;
+    min-height: calc(100vh - 80px);
+
+    .icons {
+        margin-top: 2rem;
+
+        .fa-twitter,
+        .fa-facebook,
+        .fa-instagram,
+        .fa-pinterest {
+            color: #18477c;
+        }
+
+        a {
+            padding: 0.4rem;
+        }
+    }
+
+    &#home {
+        h1 {
+            text-align: center;
+            font-size: 50px;
+        }
+
+        .intro {
+            margin-top: 1rem;
+        }
+    }
+}
+
+.lg-heading {
+    margin-bottom: 2rem;
+    color: $primary-color;
+    font-size: 35px;
+
+    .text-secondary {
+        color: $secondary-color;
+    }
+}
+
+//Catalog
+.catalog-books {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 0.7rem;
+
+    h4 {
+        color: $secondary-color;
+        font-weight: bold;
+    }
+
+    h5 {
+        color: $primary-color;
+    }
+
+    .price {
+        color: rgb(230, 115, 115);
+    }
+
+    .item {
+        img {
+            width: 150px;
+        }
+    }
+}
+
+.btn-blue {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    border: 0;
+    margin-bottom: 0.3rem;
+    text-decoration: none;
+    width: 155px;
+    &:hover {
+        background-color: lighten($icon-color, 30);
+    }
+    background: $icon-color;
+    color: white;
+}
+
+//Our Stores
+.lg-heading-stores {
+    text-align: center;
+    color: $primary-color;
+    margin-bottom: 2rem;
+    font-size: 35px;
+
+    .text-secondary {
+        color: $secondary-color;
+    }
+}
+
+.box {
+    width: 100%;
+    padding: 20px;
+    margin-bottom: 1.5rem;
+    box-sizing: border-box;
+    border-radius: 4px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    display: flex;
+    transition: 0.5s;
+
+    &:hover {
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+    }
+
+    .imgBx {
+        width: 150px;
+        flex: 0 0 150px;
+
+        img {
+            margin-top: 11px;
+            max-width: 160px;
+        }
+    }
+
+    .content {
+        padding-left: 30px;
+
+        h2 {
+            margin: 0;
+            padding-left: 0;
+            color: pink;
+            font-size: 22px;
+        }
+
+        .contact-color {
+            color: $primary-color;
+        }
+
+        p {
+            margin: 0;
+            padding: 5px 0 0;
+            text-align: center;
+            text-align: justify;
+        }
+    }
+}
+
+//Contact
+.contact-form {
+    margin: auto;
+    width: 100%;
+    max-width: 600px;
+    justify-content: center;
+    padding: 30px 40px;
+    text-align: center;
+
+    .txtb {
+        border: 1px solid $secondary-color;
+        margin: 8px 0;
+        padding: 12px 18px;
+        border-radius: 8px;
+
+        label {
+            display: block;
+            text-align: left;
+            color: $primary-color;
+            text-transform: uppercase;
+            font-size: 14px;
+        }
+
+        input,
+        textarea {
+            width: 100%;
+            border: none;
+            background: none;
+            outline: none;
+            font-size: 10px;
+            margin-top: 6px;
+            color: #0a213b;
+        }
+    }
+
+    .btn-contact {
+        display: block;
+        background-color: $icon-color;
+        padding: 14px 0;
+        color: white;
+        text-transform: uppercase;
+        cursor: pointer;
+        margin-top: 8px;
+        width: 100%;
+        border: none;
+
+        &:hover {
+            background-color: lighten($icon-color, 30);
+        }
+    }
+}
+
+//Footer
+#main-footer {
+    text-align: center;
+    padding: 1rem;
+    background: #0a213b;
+    color: #7aace6;
+    height: 60px;
+}
+
+@import "mobile";
